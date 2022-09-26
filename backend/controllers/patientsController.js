@@ -1,4 +1,4 @@
-import Patients from '../models/patients.js';
+import Patients from "../models/patients.js";
 
 const addPatient = async (req, res) => {
   try {
@@ -12,7 +12,7 @@ const addPatient = async (req, res) => {
 };
 const getPatients = async (req, res) => {
   const patients = await Patients.find()
-    .where('veterinary')
+    .where("veterinary")
     .equals(req.veterinary);
   res.json(patients);
 };
